@@ -4,6 +4,11 @@ const router = express.Router();
 
 const { createRate, getLatestRate, getRateHistory,getAllpurity ,purityUpdate , getPurityById , purityDelete, serachPurity } = require('../controllers/rateController');
 
+const {login, register} = require('../controllers/userController')
+
+
+router.post('/register',register)
+router.post('/login', login);
 
 
 
